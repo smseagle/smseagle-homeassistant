@@ -1,0 +1,1 @@
+"""SMSEagle integration."""
