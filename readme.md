@@ -1,4 +1,4 @@
-<h1>SMSEagle configuration</h1>
+<h1>Send SMS or make a text-to-speech calls from Home Assistant using SMSEagle device</h1>
 
 Here is a sample configuration to send SMS texts or make a call (ring or text-to-speech) from Home Assistant.
 
