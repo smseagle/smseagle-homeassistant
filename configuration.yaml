@@ -1,15 +1,3 @@
-# Here is a sample configuration to send SMS texts or make a call (ring or text-to-speech) from Home Assistant
-# Requirements: you need to have SMSEagle hardware SMS gateway (smseagle.eu)
-# Setup:
-# 1. SMSEagle setup
-# a) login to webGUI of your SMSEagle device
-# b) in menu Users > click in Access to API
-# c) enable APIv2 and generate new API token
-# d) in permissions enable: Send SMS (single recipient), Make a ring call, Make a TTS Advanced call
-# 2. Home Assistant setup
-# a) open file configuration.yaml (located in your HomeAssistant /config folder)
-# b) add the following lines:
-
 notify:
   - name: Send_SMS
     platform: rest
@@ -40,22 +28,3 @@ notify:
       "text": "{{ message }}"
       "access_token": "YOUR-API-ACCESS-TOKEN"
     message_param_name: "text"
-
-
-# replace IP.OF.YOUR.SMSEAGLE with IP of your SMSEagle device
-# replace YOUR-API-ACCESS-TOKEN with actual access token from setup
-
-# to send SMS from Home Assistant: 
-# a) select action "Notifications: Send a notification with send_sms"
-# b) in field message type your SMS text
-# c) check field "data" and enter: number: RECIPIENT_PHONE_NUMBER
-# 
-# to make a call (text-to-speech) from Home Assistant: 
-# a) select action "Notifications: Send a notification with make_tts_call"
-# b) in field message type your text
-# c) check field "data" and enter: number: RECIPIENT_PHONE_NUMBER
-#
-# to make a ring-only call from Home Assistant: 
-# a) select action "Notifications: Send a notification with make_a_call"
-# b) in field message type: Ring
-# c) check field "data" and enter: number: RECIPIENT_PHONE_NUMBER
